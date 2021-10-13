@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+    <script src="./js/script.js"></script>
+    <style>
+        body {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .container {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            font-size: 35vw;
+            font-family: arial;
+        }
+
+        .noselect {
+            -webkit-touch-callout: none;
+            /* iOS Safari */
+            -webkit-user-select: none;
+            /* Safari */
+            -khtml-user-select: none;
+            /* Konqueror HTML */
+            -moz-user-select: none;
+            /* Old versions of Firefox */
+            -ms-user-select: none;
+            /* Internet Explorer/Edge */
+            user-select: none;
+            /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container" class="container noselect" onclick="fullscreen()">
+        <span onclick="upvote()">
+            <i class="far fa-smile" style="color:green"></i>
+        </span>
+        <span>&nbsp;&nbsp;</span>
+        <span onclick="downvote()">
+            <i class="far fa-frown" style="color:red"></i>
+        </span>
+    </div>
+</body>
+
+</html>

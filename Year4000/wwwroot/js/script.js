@@ -1,6 +1,4 @@
-let url = "http://localhost:8081";
-
-var connection = new signalR.HubConnectionBuilder().withUrl(url + "/markHub").build();
+var connection = new signalR.HubConnectionBuilder().withUrl("/markHub").build();
 
 function componentToHex(c) {
     var hex = c.toString(16);
@@ -32,15 +30,15 @@ connection.on("NewMark", function (mark) {
 
 connection.start();
 
-$.get(url + "/social/mark", function (mark) {
+$.get("/social/mark", function (mark) {
     update(mark);
 });
 
 function upvote() {
-    $.get(url + "/social/upvote");
+    $.get("/social/upvote");
 }
 
 
 function downvote() {
-    $.get(url + "/social/downvote");
+    $.get("/social/downvote");
 }
