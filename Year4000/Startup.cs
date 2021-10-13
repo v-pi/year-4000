@@ -24,7 +24,7 @@ namespace Year4000
             {
                 options.AddPolicy(Localhost, builder =>
                 {
-                    builder.WithOrigins("http://localhost:8080", "http://192.168.1.94:8080")
+                    builder.WithOrigins("http://localhost:8081", "http://192.168.1.94:8081")
                                .AllowAnyMethod()
                                .AllowAnyHeader()
                                .AllowCredentials();

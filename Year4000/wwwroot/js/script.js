@@ -1,5 +1,6 @@
-var connection = new signalR.HubConnectionBuilder().withUrl("http://192.168.1.94:8081/markHub").build();
+let url = "http://localhost:8081";
 
+var connection = new signalR.HubConnectionBuilder().withUrl(url + "/markHub").build();
 
 function componentToHex(c) {
     var hex = c.toString(16);
@@ -20,6 +21,7 @@ function update(mark) {
     console.log(color);
     document.body.style.backgroundColor = color;
 }
+
 function fullscreen() {
     //document.getElementById("container").requestFullscreen();
 }
@@ -30,6 +32,15 @@ connection.on("NewMark", function (mark) {
 
 connection.start();
 
-$.get("http://192.168.1.94:8081/social/mark", function (mark) {
+$.get(url + "/social/mark", function (mark) {
     update(mark);
 });
+
+function upvote() {
+    $.get(url + "/social/upvote");
+}
+
+
+function downvote() {
+    $.get(url + "/social/downvote");
+}
