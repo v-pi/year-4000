@@ -1,12 +1,11 @@
-body{
+body {
     background-image: url("../images/background.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;  
-    padding-bottom: 60px;  
-    /* width: fit-content; */
-    /* background: url("Futuristic_landscape_background_with_wireframe_terrain_and_low_poly_design_2802.jpg") fixed no-repeat contain; */
+    background-position: center;
+    padding-bottom: 60px;
+    touch-action: manipulation;
 }
 
 h1{
@@ -15,10 +14,21 @@ h1{
     color: cadetblue;
     width: 100%;
     height: auto;
-/*    position: absolute;
-    top: auto;
-    left: auto;
-    right: auto;*/
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
 
 .consigne {
@@ -28,10 +38,6 @@ h1{
     color: royalblue;
     width: 100%;
     height: auto;
-    /*position: absolute;
-    top: auto;
-    left: auto;
-    right: auto*/
 }
 
 .smiley{
@@ -72,7 +78,6 @@ footer{
 
 #container{
     display: flex;
-    /* border: 1px solid red; */
     height: 30%;
     width: 100%;
     flex-direction: row;
@@ -80,31 +85,5 @@ footer{
     justify-content: center;
     align-items: center;
     text-align: center;
-    /*position: absolute;
-    top: auto;
-    right: auto;
-    left: auto;*/
-    /* &-child{
-      background: green;
-      border: 5px solid yellow;
-      flex: 1;
-    } */
+    min-height: 50%;
   }
-  
-  /* .flex--vertical{
-    flex-direction: row;
-    flex-wrap: wrap;
-  
-    > .flex-child{
-      min-width: 100%;
-    }
-  }
-  
-  .flex--horizontal{
-    flex-direction: column;
-    flex-wrap: wrap;
-  
-    > .flex-child{
-      min-width: 100%;
-    }
-  } */
